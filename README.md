@@ -9,7 +9,7 @@ Traits are short instructions on how you want the LLM to engage with you. I woul
 `Without it the LLM gives generic, sometimes bland answers`
 
 - Tasks:
-This is where we formulate what we want the LLM to achieve. The central part will usually take the form of a specific "action" such as (summarize, write, analyse, translate, order). There are a few different rules and guidelines on how to formulate the tasks in different scenarios. I will go over a handfull of the most important ones i the following:
+This is where we formulate what we want the LLM to achieve. The central part will take the form of a specific "action" such as (summarize, write, analyse, translate, order). There are a few different rules and guidelines on how to formulate the tasks in different scenarios. I will go over a handfull of the most important ones i the following:
     - Simplicity + experiment: Keeping the prompt simple and experimenting with different variants is a good way to get started. If the task at hand is big, it can be a good idea to break it into smaller sub-tasks. It can sometimes be easier to formulate each sub-task, using all the appropriate rules and guidelines, instead of trying to apply them to a very big and complex task.
     - Specificity: Try to keep instructions specific and unambigious. Try to avoid loose and imprecise terms. They should be detailed and descriptive enough for the LLM to understand the task and its details, but not so much that unimportant or redundant details are included.
     - Examples: Providing examples can sometimes be helpful when trying to formulate a prompt. Sometimes it can even be shorter and easier to provide an example instead of trying to explain it. The LLM can pick up on patterns in the examples and it also helps with format, tone and style in the outcome. 
@@ -39,7 +39,7 @@ A bad prompt is inprecise, lacking in context clues, vauge and has no clear goal
 Alot of different frameworks exists for prompt engineering.(RACE: Role, Action, Context, Expectation. APE: Action, Purpose, Expectation. COAST: Context, Objective, Actions, Scenario, Task. RICE: Role, Input, Context, Expectation) 
 
 RICE; Role, Input, Context, Expectation.
-Different frameworks work well with differens tasks. RICE is a scoring model that help prioritize elements. It uses 4 factors to score each stated element in accordance with a stated goal. RICE is good when u want alot of control over the structure or when the task include multiple steps. 
+Different frameworks work well with differens tasks. RICE is a scoring model that help prioritize elements. It uses 4 factors to score each stated element in accordance with a stated goal. RICE is good when you  want alot of control over the structure or when the task include multiple steps. 
 
 For example:
 
@@ -166,9 +166,9 @@ In the heart of the ocean, find your peace at last.
 
 
 ## reflections:
-Using the four t's framework insures more control in terms of style and tone. It also allows for more control over the task itself. Since this is a more soft/artistic task it can be hard to see. But if we wanted to include more context clues to steer the response towards something more specific output, then the four t's becomes very important. 
+Using the four t's framework insures more control in terms of style and tone. It also allows for more control over the task itself. Since this is a more soft/artistic task it can be hard to see. But if we wanted to include more context clues to steer the response towards more specific output, then the four t's becomes very important. 
 
-## Prompt Engineering Exercise – Code Example
+---
 
 ### Raw Prompt:
 > “Write a Python function to check if a number is prime.”
@@ -228,8 +228,11 @@ The second version was more understandable for someone new to coding. It walked 
 
 
 
+## final notes:
+There are also alot of techniques that can be utilize along with the framework to improve the outcome. We can, for example, use the Chain-of-thought technique combined with the four t's framework in cases where the task is complicated or involves multiple steps. By including some examples of outcomes combined with some reasoning behind the outcome, the model should be able to use this reasoning for future tasks. Key words such as, "think step by step" should/can be included at the end of the end of the "tasks" or in the "tone".
+
 Terms/techniques:
 
 - zero-shot: Simple prompt with no examples. Large LLM's are trained on ALOT of data and can handle alot of tasks without any examples. 
 - few-shot: When the task at hand is more complex, providing examples of desired outputs can help the LLM recognize the pattern. Few-shot prompting also has its limitations. The LLM will still miss the pattern in some cases, specially if the task is about reasoning. In these cases, the task might need to be broken down into smaller chunks. 
-- Chain-of-Thought (CoT) Prompting: This is close to few-shot prompting but with some extra added reasoning in the examples. Instead of just providing the outcome, the reasoning behind the outcome is also included. Providing instructions like "Think step by step" in the reasoning chain, combined with 1 or 2 example reasoning chains, could make the LLM pick up on the pattern automatically.
+- Chain-of-Thought (CoT) Prompting: This is close to few-shot prompting but with some extra added reasoning in the examples. Instead of just providing the outcome, the reasoning behind the outcome is also included. Providing instructions like "Think step by step" in the reasoning chain, combined with 1 or 2 examples, could make the LLM pick up on the pattern automatically.
