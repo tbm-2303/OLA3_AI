@@ -168,10 +168,15 @@ In the heart of the ocean, find your peace at last.
 ## reflections:
 Using the four t's framework insures more control in terms of style and tone. It also allows for more control over the task itself. Since this is a more soft/artistic task it can be hard to see. But if we wanted to include more context clues to steer the response towards something more specific output, then the four t's becomes very important. 
 
-## example 2 prompt: 
-Write a Python function to check if a number is prime.
+## 🧪 Prompt Engineering Exercise – Code Example
 
-## example 2 response: 
+### 🔹 Raw Prompt:
+> “Write a Python function to check if a number is prime.”
+
+---
+
+### 🔹 Raw Output:
+```python
 def is_prime(n):
     """Check if a number is a prime number."""
     if n <= 1:
@@ -188,6 +193,7 @@ def is_prime(n):
         i += 6
     
     return True
+
 
 ## example 2new prompt:
 You are a helpful and experienced Python tutor. Write a Python function to check if a number is prime. Be clear, educational, and beginner-friendly. Include helpful comments in the code and explain why each step is used. This is for someone learning Python who wants to understand how the function works.
