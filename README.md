@@ -39,7 +39,7 @@ A bad prompt is inprecise, lacking in context clues, vauge and has no clear goal
 Alot of different frameworks exists for prompt engineering.(RACE: Role, Action, Context, Expectation. APE: Action, Purpose, Expectation. COAST: Context, Objective, Actions, Scenario, Task. RICE: Role, Input, Context, Expectation) 
 
 RICE; Role, Input, Context, Expectation.
-Different frameworks work well with differens tasks. RICE is good at when u want alot of control over the structure or when the task include multiple steps. 
+Different frameworks work well with differens tasks. RICE is a scoring model that help prioritize elements. It uses 4 factors to score each stated element in accordance with a stated goal. RICE is good when u want alot of control over the structure or when the task include multiple steps. 
 
 For example:
 
@@ -56,7 +56,7 @@ I have a blog on Gardening and I want to improve my Instagram reach. I am consid
 
 
 
-GPT4o automatically recognized this and outputs:
+GPT4o recognized this and outputs:
 
 ## 1. **Post Consistently**
 - **Reach**: 8 – Regular posting increases visibility and potentially reaches your full audience base consistently.
@@ -103,12 +103,72 @@ GPT4o automatically recognized this and outputs:
 
 ---
 
+## raw prompt:
+Write a short poem about the ocean.
 
 
+## raw response from mistral:
+In the heart of the world, where sky and earth part,
+
+Lies an unending canvas, an ocean's art.
+A dance between tides, a rhythm undistorted,
+Breathing life into tales that haven't started.
+
+Whispers of secrets, hidden beneath its cloak,
+Of sunken treasures and ships lost to rook.
+Waves crash against shores, in melodies they croon,
+A symphony of nature where mysteries bloom.
+
+From coral reefs teeming with life so bright,
+To the deepest abyss, bathed in endless night.
+Where creatures dwell, as ancient as time,
+In this liquid mirror, beauty sublime.
+
+Oh, ocean vast, your depths unfathomable,
+Your tales of change, eternal and mobile.
+From distant shores to where sun meets sand,
+You connect us all on our common land.
+
+## using the four t's frameowrk
+
+Trait: You are a creative and emotional poet.
+Task: Write a short poem about the ocean.
+Tone: Make it gentle, nostalgic, and calming.
+Target: It is for someone going through a hard time, who needs something comforting and beautiful.
+
+Prompt: You are a creative and emotional poet. Write a short poem about the ocean. Make it gentle, nostalgic, and calming. The poem is meant for someone going through a hard time, who needs something comforting and beautiful.
+
+## prompt response:
+In the quiet of twilight, where shadows softly merge,
+I find you, lost in thoughts, my friend, I hear your fear.
+The ocean's gentle whispers call to you today,
+A calming lullaby, a balm for troubled sway.
+
+Beneath the starry sky, it stretches wide and deep,
+In its depths, secrets that time has kept.
+Waves of compassion, crashing at your shore,
+Carrying tales of love through life's untold lore.
+
+Look out to sea, my friend, where moonlight takes flight,
+See the silhouettes of dreams, basking in its light.
+Feel the rhythmic pulse of tides that ebb and flow,
+The world outside pauses as you softly grow.
+
+The ocean is a testament, of life's endless grace,
+Of the strength within us all to find our place.
+Remember, my friend, in times of strife and stress,
+The ocean's boundless beauty always beckons less.
+
+So take comfort in its embrace, let sorrow ebb away,
+For though storms come and go, love's eternal ballet.
+Know that you are loved, in this world so wide and vast,
+In the heart of the ocean, find your peace at last.
 
 
+---
 
-Terms:
+
+Terms/techniques:
 
 - zero-shot: Simple prompt with no examples. Large LLM's are trained on ALOT of data and can handle alot of tasks without any examples. 
 - few-shot: When the task at hand is more complex, providing examples of desired outputs can help the LLM recognize the pattern. Few-shot prompting also has its limitations. The LLM will still miss the pattern in some cases, specially if the task is about reasoning. In these cases, the task might need to be broken down into smaller chunks. 
