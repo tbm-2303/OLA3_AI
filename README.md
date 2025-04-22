@@ -195,10 +195,9 @@ def is_prime(n):
     return True
 
 
-## example 2new prompt:
-You are a helpful and experienced Python tutor. Write a Python function to check if a number is prime. Be clear, educational, and beginner-friendly. Include helpful comments in the code and explain why each step is used. This is for someone learning Python who wants to understand how the function works.
+🔹 Improved Prompt (Using the 4 T’s):
+    “You are a helpful and experienced Python tutor. Write a Python function to check if a number is prime. Be clear, educational, and beginner-friendly. Include helpful comments in the code and explain why each step is used. This is for someone learning Python who wants to understand how the function works.”
 
-## example 2 new response:
 def is_prime(n):
     """
     Check if a number is a prime number.
@@ -221,26 +220,10 @@ def is_prime(n):
     # If we made it through the loop without finding a divisor, it's prime
     return True
 
-💡 Explanation:
-if n <= 1:
 
-Prime numbers are greater than 1. So, we immediately return False for 0 and 1.
+## Reflection
+The second version was more understandable for someone new to coding. It walked through the logic clearly and explained both what and why. The raw version was more efficient, but the improved version better met the learning goal. It showed me how specifying tone, purpose, and audience in a prompt leads to more useful and thoughtful results.
 
-for i in range(2, n):
-
-This loop tries every number from 2 up to n-1 to see if any of them divide n evenly.
-
-If any number does divide n (i.e., n % i == 0), then n is not prime.
-
-return True at the end
-
-If the loop finishes without finding any divisors, we know the number is only divisible by 1 and itself — that means it is prime.
-
-
-## example 2new reflections:
-
-
----
 
 
 Terms/techniques:
