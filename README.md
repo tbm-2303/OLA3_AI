@@ -165,6 +165,75 @@ Know that you are loved, in this world so wide and vast,
 In the heart of the ocean, find your peace at last.
 
 
+## reflections:
+Using the four t's framework insures more control in terms of style and tone. It also allows for more control over the task itself. Since this is a more soft/artistic task it can be hard to see. But if we wanted to include more context clues to steer the response towards something more specific output, then the four t's becomes very important. 
+
+## example 2 prompt: 
+Write a Python function to check if a number is prime.
+
+## example 2 response: 
+def is_prime(n):
+    """Check if a number is a prime number."""
+    if n <= 1:
+        return False
+    if n <= 3:
+        return True
+    if n % 2 == 0 or n % 3 == 0:
+        return False
+    
+    i = 5
+    while i * i <= n:
+        if n % i == 0 or n % (i + 2) == 0:
+            return False
+        i += 6
+    
+    return True
+
+## new prompt:
+You are a helpful and experienced Python tutor. Write a Python function to check if a number is prime. Be clear, educational, and beginner-friendly. Include helpful comments in the code and explain why each step is used. This is for someone learning Python who wants to understand how the function works.
+
+## new response:
+def is_prime(n):
+    """
+    Check if a number is a prime number.
+
+    A prime number is a number greater than 1 that has no divisors
+    other than 1 and itself.
+    """
+
+    # Step 1: Handle special cases
+    if n <= 1:
+        # 0 and 1 are not prime numbers by definition
+        return False
+
+    # Step 2: Check for divisibility by numbers from 2 up to n-1
+    for i in range(2, n):
+        if n % i == 0:
+            # If n is divisible by i, it is not prime
+            return False
+
+    # If we made it through the loop without finding a divisor, it's prime
+    return True
+
+💡 Explanation:
+if n <= 1:
+
+Prime numbers are greater than 1. So, we immediately return False for 0 and 1.
+
+for i in range(2, n):
+
+This loop tries every number from 2 up to n-1 to see if any of them divide n evenly.
+
+If any number does divide n (i.e., n % i == 0), then n is not prime.
+
+return True at the end
+
+If the loop finishes without finding any divisors, we know the number is only divisible by 1 and itself — that means it is prime.
+
+
+## new reflections:
+
+
 ---
 
 
