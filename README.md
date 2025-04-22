@@ -189,10 +189,10 @@ def is_prime(n):
     
     return True
 
-## new prompt:
+## example 2new prompt:
 You are a helpful and experienced Python tutor. Write a Python function to check if a number is prime. Be clear, educational, and beginner-friendly. Include helpful comments in the code and explain why each step is used. This is for someone learning Python who wants to understand how the function works.
 
-## new response:
+## example 2 new response:
 def is_prime(n):
     """
     Check if a number is a prime number.
@@ -231,7 +231,7 @@ return True at the end
 If the loop finishes without finding any divisors, we know the number is only divisible by 1 and itself — that means it is prime.
 
 
-## new reflections:
+## example 2new reflections:
 
 
 ---
