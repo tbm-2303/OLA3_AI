@@ -168,9 +168,9 @@ In the heart of the ocean, find your peace at last.
 ## reflections:
 Using the four t's framework insures more control in terms of style and tone. It also allows for more control over the task itself. Since this is a more soft/artistic task it can be hard to see. But if we wanted to include more context clues to steer the response towards something more specific output, then the four t's becomes very important. 
 
-## 🧪 Prompt Engineering Exercise – Code Example
+## Prompt Engineering Exercise – Code Example
 
-### 🔹 Raw Prompt:
+### Raw Prompt:
 > “Write a Python function to check if a number is prime.”
 
 ---
@@ -193,6 +193,7 @@ def is_prime(n):
         i += 6
     
     return True
+```
 
 
 🔹 Improved Prompt (Using the 4 T’s):
